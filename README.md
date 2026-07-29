@@ -2,8 +2,9 @@
 
 > **Forked from [feross/buffer](https://github.com/feross/buffer)** — rewritten in TypeScript with modern ESM tooling.
 
-[![npm](https://img.shields.io/badge/npm-v2.1.15-blue)](https://www.npmjs.com/package/@yuhere/js-buffer)
-[![coverage](https://img.shields.io/badge/coverage-99%25-brightgreen)](https://github.com/yuhere/js-buffer/actions/workflows/ci.yml)
+[![npm downloads](https://img.shields.io/npm/dt/@yuhere/js-buffer.svg)](https://www.npmjs.com/package/@yuhere/js-buffer)
+[![npm](https://img.shields.io/badge/npm-v2.1.18-blue)](https://www.npmjs.com/package/@yuhere/js-buffer)
+[![coverage](https://img.shields.io/badge/coverage-99%25-brightgreen)](https://www.npmjs.com/package/@yuhere/js-buffer)
 
 The buffer module from [Node.js](http://nodejs.org/), for the browser — backed by `Uint8Array`.
 
@@ -72,8 +73,6 @@ npm run test:browser  # Run browser tests (Playwright)
 npm run test:coverage # Combined Node + Browser coverage
 npm run build         # Build ESM output to lib/
 ```
-
-CI runs Node and browser tests on every push and PR to `main` via [GitHub Actions](https://github.com/yuhere/js-buffer/actions/workflows/ci.yml).
 
 ## License
 

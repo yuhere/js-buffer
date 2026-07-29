@@ -1,7 +1,7 @@
 {
   "name": "@yuhere/js-buffer",
   "description": "Node.js Buffer API, for the browser",
-  "version": "2.1.15",
+  "version": "2.1.18",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
