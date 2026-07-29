@@ -4,6 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/@yuhere/js-buffer.svg)](https://www.npmjs.com/package/@yuhere/js-buffer)
 [![CI](https://github.com/yuhere/js-buffer/actions/workflows/ci.yml/badge.svg)](https://github.com/yuhere/js-buffer/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/yuhere/js-buffer/graph/badge.svg)](https://codecov.io/gh/yuhere/js-buffer)
 
 The buffer module from [Node.js](http://nodejs.org/), for the browser — backed by `Uint8Array`.
 
