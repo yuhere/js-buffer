@@ -12,7 +12,7 @@ export default defineConfig({
       instances: [
         {
           browser: 'chromium',
-          headless: false,
+          headless: true,
         },
       ],
     },
