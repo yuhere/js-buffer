@@ -11,7 +11,23 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  test-node:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Run Node tests
+        run: npx vitest run --config vitest.node.config.ts
+
+  test-browser:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,12 +43,5 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps chromium
 
-      - name: Run tests & coverage
-        run: npm run test:coverage
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          directory: coverage/merged
-          files: lcov.info
-          fail_ci_if_error: false
+      - name: Run Browser tests
+        run: npx vitest run --config vitest.browser.config.ts
