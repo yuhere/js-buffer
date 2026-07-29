@@ -2,8 +2,7 @@
 
 > **Forked from [feross/buffer](https://github.com/feross/buffer)** — rewritten in TypeScript with modern ESM tooling.
 
-[![npm](https://img.shields.io/npm/v/@yuhere/js-buffer.svg)](https://www.npmjs.com/package/@yuhere/js-buffer)
-[![CI](https://github.com/yuhere/js-buffer/actions/workflows/ci.yml/badge.svg)](https://github.com/yuhere/js-buffer/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/badge/npm-v2.1.15-blue)](https://www.npmjs.com/package/@yuhere/js-buffer)
 [![coverage](https://img.shields.io/badge/coverage-99%25-brightgreen)](https://github.com/yuhere/js-buffer/actions/workflows/ci.yml)
 
 The buffer module from [Node.js](http://nodejs.org/), for the browser — backed by `Uint8Array`.

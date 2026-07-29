@@ -1,7 +1,7 @@
 {
   "name": "@yuhere/js-buffer",
   "description": "Node.js Buffer API, for the browser",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
@@ -64,7 +64,9 @@
     "test:node": "vitest run --config vitest.node.config.ts",
     "test:browser": "vitest --config vitest.browser.config.ts",
     "test:coverage": "vitest run --config vitest.node.config.ts --coverage && vitest run --config vitest.browser.config.ts --coverage && tsx test/coverage-merge.ts && tsx scripts/generate-badge.ts",
-    "test:watch": "vitest --config vitest.node.config.ts"
+    "test:watch": "vitest --config vitest.node.config.ts",
+    "version": "tsx scripts/generate-badge.ts",
+    "prepublishOnly": "npm run test && npm run build && tsx scripts/generate-badge.ts"
   },
   "dependencies": {
     "@yuhere/js-base64": "^0.0.8",
