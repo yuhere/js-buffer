@@ -1,0 +1,73 @@
+{
+  "name": "@yuhere/js-buffer",
+  "description": "Node.js Buffer API, for the browser",
+  "version": "2.1.14",
+  "author": {
+    "name": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "http://feross.org"
+  },
+  "bugs": {
+    "url": "https://github.com/yuhere/js-buffer/issues"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "contributors": [
+    "Romain Beauxis <toots@rastageeks.org>",
+    "James Halliday <mail@substack.net>"
+  ],
+  "devDependencies": {
+    "@vitest/browser": "^4.1.10",
+    "@vitest/browser-playwright": "^4.1.10",
+    "@vitest/coverage-istanbul": "^4.1.10",
+    "benchmark": "1.x",
+    "istanbul-lib-coverage": "^3.2.2",
+    "istanbul-lib-report": "^3.0.1",
+    "istanbul-reports": "^3.2.0",
+    "playwright": "^1.62.0",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.1.5",
+    "vitest": "^4.1.10"
+  },
+  "homepage": "https://github.com/yuhere/js-buffer",
+  "keywords": [
+    "buffer",
+    "browserify",
+    "compatible",
+    "browser",
+    "arraybuffer",
+    "uint8array",
+    "dataview"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuhere/js-buffer.git"
+  },
+  "scripts": {
+    "build": "vite build && npm run build:types",
+    "build:types": "tsc -p tsconfig.types.json",
+    "test": "vitest run --config vitest.node.config.ts",
+    "test:node": "vitest run --config vitest.node.config.ts",
+    "test:browser": "vitest --config vitest.browser.config.ts",
+    "test:coverage": "vitest run --config vitest.node.config.ts --coverage && vitest run --config vitest.browser.config.ts --coverage && tsx test/coverage-merge.ts",
+    "test:watch": "vitest --config vitest.node.config.ts"
+  },
+  "dependencies": {
+    "@yuhere/js-base64": "^0.0.8",
+    "@yuhere/js-ieee754": "^1.2.1"
+  }
+}
